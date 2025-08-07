@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BoApi</name>
+    </assembly>
+    <members>
+        <member name="M:BoApi.Controllers.AccountController.Create(DTOs.Models.CreateAccountModel)">
+            <summary>
+            Create Account
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BoApi.Controllers.AccountController.Update(System.String,DTOs.Models.UpdateAccountModel)">
+            <summary>
+            Update Account
+            </summary>
+            <param name="userId"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BoApi.Controllers.AccountController.GetById(System.String)">
+            <summary>
+            Get account's profile by account Id
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BoApi.Controllers.AccountController.Delete(System.String)">
+            <summary>
+            Delete User
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BoApi.Controllers.AccountController.UpdateProfile(DTOs.Models.UpdateProfile)">
+            <summary>
+            Update Profile
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BoApi.Controllers.AccountController.GetByToken">
+            <summary>
+            Get Account By Token
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BoApi.Controllers.AccountController.Get(DTOs.Models.PaginationAccountRequest)">
+            <summary>
+            Get Users with Pagination
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BoApi.Controllers.AccountController.ChangeState(System.String,System.Boolean)">
+            <summary>
+            Change state User
+            </summary>
+            <param name="Id"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BoApi.Controllers.AuthController.Login(DTOs.Models.LoginModel)">
+            <summary>
+            Login
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BoApi.Controllers.AuthController.SendPasswordResetLink(DTOs.Models.SendPasswordResetLink)">
+            <summary>
+            Request email to reset password
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BoApi.Controllers.AuthController.ResetPassword(DTOs.Models.ResetPassword)">
+            <summary>
+            Reset password with token from request
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BoApi.Controllers.AuthController.Logout">
+            <summary>
+            Logout
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BoApi.Controllers.AuthController.LoginDevice(DTOs.Models.LoginDeviceModel)">
+            <summary>
+            Login device
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

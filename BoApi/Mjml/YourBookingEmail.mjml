@@ -1,0 +1,142 @@
+﻿<mjml>
+	<mj-font name="Sans-serif"></mj-font>
+	<mj-body background-color="#f1f1f1" width="1024px">
+		<mj-wrapper padding-left="15px" padding-right="15px">
+			<mj-section padding="0px" background-color="#ffffff">
+				<mj-column width="100%">
+					<mj-table>
+						<tr style="width:100%">
+							<td style="width: 30%">
+							</td>
+							<td style="
+                         font-size: 36px; 
+                         color: #000000; 
+                         padding-bottom: 10px; 
+                         width: 40%;
+                         text-align: center; font-family:Sans-serif">
+								Your Booking
+							</td>
+							<td>
+								<img style="width:90%; margin-bottom: 50px;" src="@Model.CompanyLogo" alt="@Model.CompanyLogo"></img>
+							</td>
+						</tr>
+					</mj-table>
+				</mj-column>
+				<mj-column width="100%">
+					<mj-text mj-class="grey content" font-size="16px" font-family="Sans-serif">
+						Please use this link to pay your booking : @Model.PaymentUrl
+					</mj-text>
+				</mj-column>
+				<mj-column width="50%">
+					<mj-table padding="0 30px">
+						<tr>
+							<td style="padding: 5px 0; font-size: 16px; color: #000000" font-family="Sans-serif">
+								Booking Date:
+							</td>
+							<td style="padding: 5px 0; font-size: 16px; color: #000000" font-family="Sans-serif">
+								@Model.Booking.BookingDate
+							</td>
+						</tr>
+						<tr>
+							<td style="padding: 5px 0; font-size: 16px; color: #000000" font-family="Sans-serif">
+								Reference:
+							</td>
+							<td style="padding:5px 0; font-size: 16px; color: #000000;" font-family="Sans-serif">
+								@Model.Booking.ReferenceNo
+							</td>
+						</tr>
+					</mj-table>
+				</mj-column>
+				<mj-column width="50%">
+					<mj-table padding="0 30px">
+						<tr>
+							<td style="padding: 5px 0; font-size: 16px; color: #000000" font-family="Sans-serif">
+								Status:
+							</td>
+							<td style="padding: 5px 0; font-size: 16px; color: #000000" font-family="Sans-serif">
+								@Model.Booking.Status
+							</td>
+						</tr>
+						<tr>
+							<td style="padding: 5px 0; font-size: 16px; color: #000000" font-family="Sans-serif">
+								Ticket Name:
+							</td>
+							<td style="padding:5px 0; font-size: 16px; color: #000000;" font-family="Sans-serif">
+								@Model.Booking.TicketName
+							</td>
+						</tr>
+					</mj-table>
+				</mj-column>
+			</mj-section>
+			<mj-section padding="0px" background-color="#ffffff">
+				<mj-column width="100%">
+					<mj-table>
+						<tr style="border-bottom: 2px solid #d1d1d1 ">
+							<td style="padding: 5px 0; font-size: 18px; color: #000000; width: 40%; font-weight: bold" font-family="Sans-serif">
+								Description
+							</td>
+							<td style="padding: 5px 0; font-size: 18px; color: #000000; font-weight: bold; width:15%; text-align: center" font-family="Sans-serif">
+								Quantity
+							</td>
+							<td style="padding: 5px 0; font-size: 18px; color: #000000; font-weight: bold; width:15%; text-align: center" font-family="Sans-serif">
+								Seat
+							</td>
+							<td style="padding: 5px 0; font-size: 18px; color: #000000; font-weight: bold; width:15%; text-align: center" font-family="Sans-serif">
+								Item price
+							</td>
+						</tr>
+					</mj-table>
+					<mj-raw>
+						@foreach (var item in Model.Booking.BookingDetails) {
+					</mj-raw>
+					<mj-table>
+						<tr>
+							<td style="padding: 5px 0; font-size: 16px; color: #000000; width: 40%" font-family="Sans-serif">
+								@item.Name
+							</td>
+							<td style="padding: 5px 0; font-size: 16px; color: #000000; width:15%; text-align: center" font-family="Sans-serif">
+								@item.Quantity
+							</td>
+							<td style="padding: 5px 0; font-size: 16px; color: #000000; width:15%; text-align: center" font-family="Sans-serif">
+								@item.SeatId
+							</td>
+							<td style="padding: 5px 0; font-size: 16px; color: #000000; width:15%; text-align: center" font-family="Sans-serif">
+								@Model.Booking.Symbol@item.Price
+							</td>
+						</tr>
+					</mj-table>
+					<mj-raw>
+						}
+					</mj-raw>
+				</mj-column>
+				<mj-column width="100%">
+					<mj-text font-size="16px" color="#5c5c5c" font-family="Sans-serif">
+						@Model.EmailFooter
+					</mj-text>
+				</mj-column>
+			</mj-section>
+		</mj-wrapper>
+		<mj-section padding="0px 15px">
+			<mj-column width="100%">
+				<mj-text color="#646464" font-family="Sans-serif">
+					@Model.ClientNameFooter
+				</mj-text>
+			</mj-column>
+			<mj-column width="100%">
+				<mj-table>
+					<tr>
+						<td style="font-size: 14px; color: #646464" font-family="Sans-serif">
+							wwww.ecr.co.uk
+						</td>
+						<td style="font-size: 16px; color: #646464;text-align: center" font-family="Sans-serif">
+              ECR Solutions ©@DateTime.Now.Year
+            </td>
+						<td style="font-size: 14px; color: #646464; text-align: right" font-family="Sans-serif">
+							All rights reserved.
+						</td>
+					</tr>
+				</mj-table>
+			</mj-column>
+		</mj-section>
+	</mj-body>
+</mjml>

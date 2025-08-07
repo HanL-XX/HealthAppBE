@@ -1,0 +1,230 @@
+﻿<mjml>
+  <mj-head>
+    <mj-font name="Sans-serif" />
+    <mj-style>
+      .qr-code {
+        position: relative;
+      }
+
+      .qr-code img {
+        position: absolute !important;
+        width: 100px !important;
+        padding: 25px !important;
+        background: #fff;
+        margin-top: -60px;
+        border: 2px solid #4e42ee !important;
+        border-radius: 5px;
+      }
+
+      .title div {
+        margin-top: -30px;
+        margin-bottom: 70px;
+      }
+
+      hr {
+        border: none;
+        border-bottom: 1px solid #d1d1d1;
+        height: 1px;
+        width: 85%;
+        margin-top: 5px;
+      }
+
+      .text1 {
+        display: none;
+      }
+
+      .desktop-view {
+        display: block !important;
+      }
+
+      .mobile-view {
+        display: none !important;
+      }
+
+      .mobile-1 {
+        display: block !important;
+      }
+
+      .mobile {
+        display: none !important;
+      }
+
+      @media screen and (max-width:767px) {
+        .desktop-view {}
+
+        .header div {
+          font-size: 20px !important;
+        }
+
+        .text {
+          display: none;
+        }
+
+        .text1 {
+          display: block;
+        }
+
+        .image-header {
+          padding: 0px !important;
+        }
+
+        .Qrcodetext {
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+
+        .mobile {
+          display: block !important;
+        }
+
+        .desktop {
+          display: none !important;
+        }
+      }
+
+      .mobile-view {
+        display: block !important;
+      }
+
+      div.mj-column-per-50 {
+        width: 50% !important;
+      }
+
+      .qr-code {
+        position: relative;
+      }
+
+      .qr-code img {
+        width: 100px !important;
+        padding: 25px !important;
+        background: #fff;
+        margin-top: -80px;
+        border: 2px solid #4e42ee !important;
+        border-radius: 5px;
+      }
+
+      .logo img {
+        margin-top: -30px;
+      }
+
+      hr {
+        border: none;
+        border-bottom: 1px solid #c2c2c2;
+        height: 1px;
+        width: 100%;
+        margin-top: -30px;
+      }
+
+      .custom-title-text div {
+        margin-top: 10px;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body width="1270px">
+    <mj-wrapper background-color="#ffffff" padding-left="15px" padding-right="15px">
+      <mj-section padding="10px" background-color="#13372E" background-size="cover" background-repeat="no-repeat">
+
+		  <mj-column  width="70%">
+			  <mj-text css-class="header"  padding="18px 0 0 0"  align="left"
+					   color="#fff"
+					   font-size="25px"
+					   font-family="Helvetica Neue">
+				  YOUR BOOKING IS CANCELLED
+			  </mj-text>
+		  </mj-column>
+		  <mj-column width="20%">
+			  <mj-image css-class="image-header" align="right" src="https://cadw-stock.s3.eu-west-1.amazonaws.com/general/CADWLogo.png"/>
+		  </mj-column>
+      </mj-section>
+    </mj-wrapper>
+
+    <mj-wrapper background-color="#ffffff" padding-left="15px" padding-right="15px">
+      <mj-section padding="10px">
+        <mj-column width="100%">
+
+          <mj-text padding="0" align="left" color="#000" font-size="14px" font-family="Helvetica Neue">
+            Hi @Model.Booking.CustomerName
+          </mj-text>
+
+          <mj-text padding="20px 0px 0px 0px" align="left" color="#000" font-size="14px" font-family="Helvetica Neue">
+            Your refund has been processed for the following event / entry ticket purchase:
+          </mj-text>
+
+          <mj-text padding="20px 0px 0px 0px" align="left" color="#000" font-size="14px" font-weight="bold" font-family="Helvetica Neue">
+            Booking Reference: @Model.Booking.ReferenceNo
+          </mj-text>
+          <mj-text padding="0px 0px 0px 0px" align="left" color="#000" font-size="14px" font-weight="normal" font-family="Helvetica Neue">
+            Ticket: @Model.Booking.TicketName <br>
+            Event Date & Time: @Model.Booking.BookingDate <br>
+            Refund Amount: @Model.Booking.OutstandingBalanceString
+          </mj-text>
+          <mj-text padding="20px 0px 0px 0px" align="left" color="#000" font-size="14px" font-weight="normal" font-family="Helvetica Neue">
+            The refund can take up to 7 days to process. <br><br>
+
+            This email is sent in the language preference chosen when you registered with Cadw. To check or amend your details, including your language preference, please log in to MyCadw. <br><br>
+
+            If you have any queries regarding your refund, please call us on: 03000 252239 or email: cadw@tfw.wales
+          </mj-text>
+          <mj-text padding="20px 0px 0px 0px" align="left" color="#000" font-size="14px" font-weight="normal" font-family="Helvetica Neue">
+            Thank you, <br>
+            The Cadw team
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+	<mj-wrapper background-color="#ffffff" padding-left="15px" padding-right="15px">
+      <mj-section padding="10px">
+        <mj-column width="100%">
+
+          <mj-text padding="0" align="left" color="#000" font-size="14px" font-family="Helvetica Neue">
+            Helo @Model.Booking.CustomerName
+          </mj-text>
+
+          <mj-text padding="20px 0px 0px 0px" align="left" color="#000" font-size="14px" font-family="Helvetica Neue">
+            Mae eich ad-daliad wedi'i brosesu ar gyfer y digwyddiad canlynol / prynu tocyn mynediad:
+          </mj-text>
+
+          <mj-text padding="20px 0px 0px 0px" align="left" color="#000" font-size="14px" font-weight="bold" font-family="Helvetica Neue">
+            Cyfeirnod Archebu: @Model.Booking.ReferenceNo
+          </mj-text>
+          <mj-text padding="0px 0px 0px 0px" align="left" color="#000" font-size="14px" font-weight="normal" font-family="Helvetica Neue">
+            Tocyn: @Model.Booking.TicketName <br>
+            Amser Dyddiad y Digwyddiad: @Model.Booking.BookingDate <br>
+            Swm yr Ad-daliad: @Model.Booking.OutstandingBalanceString
+          </mj-text>
+          <mj-text padding="20px 0px 0px 0px" align="left" color="#000" font-size="14px" font-weight="normal" font-family="Helvetica Neue">
+            Gall yr ad-daliad gymryd hyd at saith diwrnod i'w brosesu. <br><br>
+
+            Mae'r ebost yma yn cael ei anfon yn yr iaith y dewisoch wrth ichi gofrestru gyda Cadw. I wirio neu newid eich manylion, gan gynnwys eich dewis iaith, ewch i FyCadw. <br><br>
+
+            Os oes gennych unrhyw ymholiadau am eich ad-daliad, ffoniwch ni ar:  03000 252239 neu e-bost: cadw@tfw.wales
+          </mj-text>
+          <mj-text padding="20px 0px 0px 0px" align="left" color="#000" font-size="14px" font-weight="normal" font-family="Helvetica Neue">
+            Diolch, <br>
+            Tîm Cadw
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+	<mj-wrapper background-color="#ffffff" padding-left="15px" padding-right="15px">
+      <mj-section padding="10px" background-color="#dddddd" background-size="cover" background-repeat="no-repeat">
+
+        <mj-column width="33%">
+          <mj-text padding="0" align="left" color="#000" font-size="10px" font-family="Helvetica Neue">
+			www.ecr.co.uk
+          </mj-text>
+        </mj-column>
+		<mj-column width="34%">
+          <mj-text padding="0" align="center" color="#000" font-size="10px" font-family="Helvetica Neue">
+            ECR Solutions ©@DateTime.Now.Year
+          </mj-text>
+        </mj-column>
+        <mj-column width="33%">
+			<mj-text  padding="0" align="right" color="#000" font-size="10px" font-family="Helvetica Neue">
+			All right reserved.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

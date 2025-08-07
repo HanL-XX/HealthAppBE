@@ -1,0 +1,52 @@
+﻿<mjml>
+    <mj-head>
+        <mj-attributes>
+            <mj-class color="#545454" name="grey" />
+            <mj-class align="center" name="center" />
+            <mj-class font-size="18px" name="sub" />
+            <mj-class font-size="16px" name="content" />
+            <mj-class font-size="40px" name="title" />
+            <mj-class color="#acacac" name="footer" />
+        </mj-attributes>
+    </mj-head>
+    <mj-body width="720px">
+        <mj-wrapper background-color="#eeeeee" padding="30px 30px 0px 30px">
+            <mj-section background-color="#fff">
+                <mj-column width="100%">
+                    <mj-text mj-class="grey content">
+                        Hello @Model.ToName,
+                    </mj-text>
+                    <mj-spacer />
+                    <mj-text mj-class="grey content">
+                        @Model.ClientName
+                    </mj-text>
+                    <mj-spacer />
+                    <mj-text mj-class="grey content">
+                        There are @Model.TransactionQueues.Count failed transactions after creating on @Model.DateTime.ToString("dd/MM/yyyy")
+                    </mj-text>
+                    <mj-text mj-class="grey content">
+                        In order to view the detail, please open the attachment
+                    </mj-text>
+                    <mj-text mj-class="grey content">
+                        This is an automated email. Do not reply to this email
+                    </mj-text>
+                </mj-column>
+            </mj-section>
+            <mj-section>
+                <mj-column width="33%">
+                    <mj-text mj-class="center">
+                        <a style="text-decoration:none; color: #acacac">
+                            www.ecr.co.uk
+                        </a>
+                    </mj-text>
+                </mj-column>
+                <mj-column width="33%">
+                    <mj-text mj-class="center footer">ECR Solutions ©@DateTime.Now.Year</mj-text>
+                </mj-column>
+                <mj-column width="33%">
+                    <mj-text mj-class="center footer">All rights reserved.</mj-text>
+                </mj-column>
+            </mj-section>
+        </mj-wrapper>
+    </mj-body>
+</mjml>

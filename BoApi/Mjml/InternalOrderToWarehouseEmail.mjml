@@ -1,0 +1,68 @@
+﻿<mjml>
+	<mj-head>
+		<mj-attributes>
+			<mj-class color="#acacac" name="footer"/>
+			<mj-class align="center" name="center" />
+			<mj-class font-size="16px" line-height="18px" name="text"/>
+		</mj-attributes>
+	</mj-head>
+	<mj-body width="720px">
+		<mj-wrapper background-color="#eeeeee" padding="30px 30px 0px 30px">
+			<mj-section background-color="#fff">
+				<mj-column width="100%">
+					<mj-image width="200px" align="left" src="@Model.ClientLogo"></mj-image>
+					<mj-spacer />
+				</mj-column>
+				<mj-column width="100%">
+					<mj-text mj-class="text">
+						Annwyl @Model.WarehouseName,
+					</mj-text>
+					<mj-text mj-class="text">
+						Rydych wedi derbyn archeb @Model.PO wrth Cadw - @Model.BranchName.
+					</mj-text>
+					<mj-text mj-class="text">
+						<u>Rhaid</u> i’r Tîm Manwerthu o’r Brif Swyddfa awdurdodi unrhyw gyfnewidiadau nwyddau, newidiadau pris neu swm <u>cyn</u> anfon yr archeb. Gyrrwch e-bost i <a href="supplycadw@llyw.cymru">supplycadw@llyw.cymru</a> mor gynted â phosibl gydag unrhyw wybodaeth ddiweddaraf.
+					</mj-text>
+					<mj-spacer />
+					<mj-text mj-class="text">
+						Yn gywir,<br />Tîm Manwerthu Cadw
+					</mj-text>
+					<mj-divider border-width="1px" border-style="dashed" border-color="lightgrey" />
+				</mj-column>
+			</mj-section>
+			<mj-section background-color="#fff">
+				<mj-column width="100%">
+					<mj-text mj-class="text">
+						Dear @Model.WarehouseName,
+					</mj-text>
+					<mj-text mj-class="text">
+						Please see attached purchase order @Model.PO from Cadw - @Model.BranchName.
+					</mj-text>
+					<mj-text mj-class="text">
+						Any product substitutions, price or quantity changes <u>must</u> be agreed by the Retail Team at Head Office <u>before</u> the order is dispatched. Please email <a href="supplycadw@gov.wales">supplycadw@gov.wales</a> as soon as possible with any updates.
+					</mj-text>
+					<mj-spacer />
+					<mj-text mj-class="text">
+						Kind regards,<br />Cadw Retail Team
+					</mj-text>
+				</mj-column>
+			</mj-section>
+			<mj-section>
+				<mj-column width="33%">
+					<mj-text mj-class="center">
+						<a href="www.ecr.co.uk" style="text-decoration: none; color: #acacac">
+							www.ecr.co.uk
+						</a>
+					</mj-text>
+				</mj-column>
+				<mj-column width="33%">
+					<mj-text mj-class="center footer">ECR Solutions ©2021</mj-text>
+				</mj-column>
+				<mj-column>
+					<mj-text mj-class="center footer">All rights reserved.</mj-text>
+				</mj-column>
+			</mj-section>
+		</mj-wrapper>
+
+	</mj-body>
+</mjml>

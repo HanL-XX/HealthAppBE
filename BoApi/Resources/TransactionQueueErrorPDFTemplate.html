@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #errors {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #errors td, #errors th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #errors tr:nth-child(even){background-color: #f2f2f2;}
+
+        #errors tr:hover {background-color: #ddd;}
+
+        #errors th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+<h1>Client Name</h1>
+<h1>There are 5 failed transactions after creating on 26/8/2022</h1>
+
+<table id="errors">
+    <tr>
+        <th>No.</th>
+        <th>Transaction Id</th>
+        <th>Sale no</th>
+        <th>Date</th>
+        <th>Errors</th>
+    </tr>
+    <tr>
+        <td style="width: 3%">1</td>
+        <td style="width: 25%">01e12088-a3c0-464e-8145-3792673e6cf7</td>
+        <td style="width: 17%">08221700797000008743</td>
+        <td style="width: 12%">11:27 2022-07-13</td>
+        <td style="width: 43%">Empty transaction detail</td>
+    </tr>
+</table>
+
+</body>
+</html>

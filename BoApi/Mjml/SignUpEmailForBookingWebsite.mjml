@@ -1,0 +1,68 @@
+﻿<mjml>
+	<mj-head>
+		<mj-html-attributes>
+			<mj-selector path=".btn-block a">
+				<mj-html-attribute name="style">
+					display:block;background:#1e273a;color:#ffffff;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:16px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:3px;
+				</mj-html-attribute>
+			</mj-selector>
+		</mj-html-attributes>
+		<mj-attributes>
+			<mj-class color="#545454" name="grey" />
+			<mj-class align="center" name="center" />
+			<mj-class font-size="18px" name="sub" />
+			<mj-class font-size="16px" name="content" />
+			<mj-class font-size="40px" name="title" />
+			<mj-class color="#acacac" name="footer" />
+		</mj-attributes>
+		<mj-style>
+			.btn-block a {
+			display: block !important;
+			}
+		</mj-style>
+	</mj-head>
+	<mj-body width="720px">
+		<mj-wrapper background-color="#eeeeee" padding="30px 30px 0px 30px">
+			<mj-section background-color="#fff">
+				<mj-column width="100%">
+					<mj-image width="200px" align="center" src="https://cadw-stock.s3.eu-west-1.amazonaws.com/general/cadw-logo.png" />
+					<mj-spacer />
+					<mj-text mj-class="center title">This account is ready to go!</mj-text>
+					<mj-spacer />
+					<mj-text mj-class="grey content center">
+						Please click on the link below to verify your account!
+					</mj-text>
+					<mj-spacer height="30px" />
+					<mj-text mj-class="center grey sub">
+						Username
+					</mj-text>
+					<mj-text mj-class="center sub">
+						<a href="#" style="text-decoration:none; font-weight:bold;color: #000">
+							@Model.Username
+						</a>
+					</mj-text>
+					<mj-text mj-class="center grey sub">Verification link</mj-text>
+					<mj-text mj-class="center sub">
+						<a href="@Model.Password">@Model.Password</a>
+					</mj-text>
+					<mj-button width="100%" background-color="#1e273a" href="@Model.Password" mj-class="content" css-class="btn-block">Login to your account</mj-button>
+				</mj-column>
+			</mj-section>
+			<mj-section>
+				<mj-column width="33%">
+					<mj-text mj-class="center">
+						<a style="text-decoration:none; color: #acacac">
+							www.ecr.co.uk
+						</a>
+					</mj-text>
+				</mj-column>
+				<mj-column width="33%">
+					<mj-text mj-class="center footer">ECR Solutions ©@DateTime.Now.Year</mj-text>
+				</mj-column>
+				<mj-column width="33%">
+					<mj-text mj-class="center footer">All rights reserved.</mj-text>
+				</mj-column>
+			</mj-section>
+		</mj-wrapper>
+	</mj-body>
+</mjml>

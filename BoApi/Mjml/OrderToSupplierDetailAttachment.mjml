@@ -1,0 +1,225 @@
+﻿<mjml>
+	<mj-head>
+	</mj-head>
+	<mj-body width="1024px">
+		<mj-section>
+			<mj-column width="100%">
+				<mj-image width="150px" align="left" src="@Model.ClientLogo"/>
+			</mj-column>
+			<mj-column width="40%">
+
+				<mj-spacer />
+				<mj-spacer />
+				<mj-text font-size="27px" font-weight="bold">
+					PURCHASE ORDER
+				</mj-text>
+				<mj-spacer />
+				<mj-spacer />
+
+				<mj-table padding="25px 25px 0px 25px">
+					<tr style="text-align: left; color: white;">
+						<td style="background-color:#000000; width:50%; padding: 2px 10px; border-radius: 8px 8px 0px 0px">
+							Supplier
+						</td>
+						<td>&#8195;&#8195;</td>
+					</tr>
+				</mj-table>
+				<mj-table font-size="14px" padding="0px 25px">
+					<tr>
+						<td style="font-size=20px; line-height: 17px; background-color: #f5f5f5; border-radius: 8px; padding: 15px">
+							@Model.SupplierName<br />
+							@Model.SupplierAddress<br />
+							@Model.SupplierPostCode<br />
+							@Model.SupplierEmail<br />
+						</td>
+					</tr>
+				</mj-table>
+				<mj-table padding="25px 25px 0px 25px">
+					<tr>
+						<td style="padding:15px; font-size:15px; font-weight:bold">
+							Comments
+						</td>
+					</tr>
+					<tr>
+						<td style="padding-left:30px">
+							@Model.Comments
+						</td>
+					</tr>
+				</mj-table>
+			</mj-column>
+			<mj-column width="20%">
+
+			</mj-column>
+			<mj-column width="40%">
+				<mj-table padding="0px 25px">
+					<tr style="text-align: left; color: white;">
+						<td style="background-color:#1e273a; width:50%; padding: 2px 10px; border-radius: 8px 8px 0px 0px">
+							Date
+						</td>
+						<td>&#8195;</td>
+					</tr>
+				</mj-table>
+				<mj-table font-size="14px" padding="0px 25px">
+					<tr>
+						<td style="background-color: #f5f5f5;  border-radius: 8px; padding: 5px 10px">
+							@Model.OrderDate
+						</td>
+					</tr>
+				</mj-table>
+				<mj-table padding="25px 25px 0px 25px">
+					<tr style="text-align: left; color: white;">
+						<td style="background-color:#1e273a; width:50%; padding: 2px 10px; border-radius: 8px 8px 0px 0px">
+							Purchase order no.
+						</td>
+						<td>&#8195;</td>
+					</tr>
+				</mj-table>
+				<mj-table font-size="14px" padding="0px 25px">
+					<tr>
+						<td style="background-color: #f5f5f5;  border-radius: 8px; padding: 5px 10px">
+							@Model.PO
+						</td>
+					</tr>
+				</mj-table>
+				<mj-table padding="25px 25px 0px 25px">
+					<tr style="text-align: left; color: white;">
+						<td style="background-color:#1e273a; width:50%; padding: 2px 10px; border-radius: 8px 8px 0px 0px">
+							Deliver to:
+						</td>
+						<td>&#8195;</td>
+					</tr>
+				</mj-table>
+				<mj-table font-size="14px" padding="0px 25px">
+					<tr>
+						<td style="line-height: 17px; background-color: #f5f5f5;  border-radius: 8px; padding: 15px">
+							@Model.BranchName<br />
+							@Model.BranchAddress1<br />
+							@Model.BranchAddress2<br />
+							@Model.BranchAddress3<br />
+							@Model.BranchPostCode<br />
+							@Model.BranchTelNo<br />
+							@Model.BranchEmail<br />
+						</td>
+					</tr>
+				</mj-table>
+			</mj-column>
+			<mj-column width="100%">
+				<mj-divider border-width="1px" border-color="#e3e3e3" />
+				<mj-text padding-left="55px">
+					Enquiries: supplycadw@gov.wales
+				</mj-text>
+			</mj-column>
+		</mj-section>
+		<mj-section>
+			<mj-column background-color="#f5f5f5" width="95%">
+				<mj-text>Order details</mj-text>
+			</mj-column>
+		</mj-section>
+		<mj-section>
+			<mj-column width="100%">
+				<mj-table width="95%" >
+					<tr>
+						<td>&#160;</td>
+						<td>&#160;</td>
+						<td>&#160;</td>
+						<td>&#160;</td>
+						<td style="background-color:#faf7c7; text-align: center; border-radius: 15px 15px 0px 0px;">
+							&#160;
+						</td>
+						<td>&#160;</td>
+					</tr>
+					<tr style="color: white; background-color:#1e273a;">
+						<td style="text-align:center; padding: 5px 15px; border-radius: 20px 0px 0px 20px">
+							Sup. code
+						</td>
+						<td style="text-align: center">
+							PLU code
+						</td>
+						<td style="text-align: center">
+							Product name
+						</td>
+						<td style="text-align: center">
+							Unit Cost
+						</td>
+						<td style="text-align: center">
+							QTY
+						</td>
+						<td style="text-align:center; padding: 5px 15px; border-radius: 0px 20px 20px 0px">
+							Line cost
+						</td>
+					</tr>
+					<tr>
+						<td>&#160;</td>
+						<td>&#160;</td>
+						<td>&#160;</td>
+						<td>&#160;</td>
+						<td style="background-color:#faf7c7; text-align: center">&#160;</td>
+						<td>&#160;</td>
+					</tr>
+					<mj-raw>
+						@foreach(var item in @Model.OrderDetails) {
+					</mj-raw>
+					<tr style="text-align: center; border-top:1px solid black; border-bottom: 1px solid black">
+						<td>@item.SupCode</td>
+						<td style="text-align: center">@item.PLUCode</td>
+						<td style="text-align: center">@item.ProductName</td>
+						<td style="text-align: center">@item.Cost</td>
+						<td style="background-color:#faf7c7; text-align: center">@item.QTY</td>
+						<td style="text-align: center">@item.LineCost</td>
+					</tr>
+					<mj-raw>
+						}
+					</mj-raw>
+				</mj-table>
+			</mj-column>
+		</mj-section>
+		<mj-section>
+			<mj-column width="50%"></mj-column>
+			<mj-column width="40%">
+				<mj-table container-background-color="#f5f5f5" align="right" width="100%">
+					<tr>
+						<td>Total lines:</td>
+						<td style="text-align:right">
+							@Model.TotalLines
+						</td>
+					</tr>
+					<tr>
+						<td>Total items:</td>
+						<td style="text-align:right">
+							@Model.TotalItems
+						</td>
+					</tr>
+					<tr>
+						<td style="padding-bottom: 10px">P&#38;P Charges:</td>
+						<td style="text-align:right; padding-bottom: 10px">
+							@Model.CarriageCharge
+						</td>
+					</tr>
+					<tr style="border-top: 1px solid; font-weight: bold">
+						<td style="padding-top: 5px">Total:</td>
+						<td style="text-align:right; padding-top: 5px">
+							£@Model.Total
+						</td>
+					</tr>
+
+				</mj-table>
+			</mj-column>
+		</mj-section>
+
+		<mj-section>
+			<mj-column width="100%">
+				<mj-divider width="90%" border-width="2px" border-color="#e3e3e3" />
+			</mj-column>
+			<mj-column width="25%">
+				<mj-image width="150px" align="left" src="@Model.ClientLogo"/>
+			</mj-column>
+			<mj-column width="75%" padding-right="25px">
+				<mj-text padding-top="25px" align="right">
+					Cadw &#8194; &#8195; &#8195; &#8195; &#8195; &#8195; &#8195; &#8195; &#8195; &#8195; &#8195; &#8195; &#8195; &#8195; &#8195; Welsh Government
+					<br />
+          Rhydycar Business Park, Merthyr Tydfil, CF48 1UZ, Tel: 0300 0256000
+        </mj-text>
+			</mj-column>
+		</mj-section>
+	</mj-body>
+</mjml>

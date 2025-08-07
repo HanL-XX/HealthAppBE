@@ -1,0 +1,59 @@
+﻿<mjml>
+	<mj-body>
+		<mj-section background-color="#ffffff" background-repeat="repeat" padding-bottom="20px" padding-top="30px" padding="20px 0" text-align="center">
+			<mj-column width="35%">
+				<mj-image align="center" padding="20px 15px" href="https://www.cadwmembership.service.gov.wales/" src="https://cadw-stock.s3.eu-west-1.amazonaws.com/general/cadw-logo.png" target="_blank" width="214px"></mj-image>
+			</mj-column>
+			<mj-column width="65%">
+			</mj-column>
+		</mj-section>
+		<mj-section background-repeat="repeat" padding-bottom="0px" padding-top="0px" padding="20px 0" text-align="center">
+			<mj-column>
+				<mj-image align="center" padding-bottom="20px" padding-left="25px" padding-right="25px" padding-top="20px" padding="10px 25px" src="https://cadw-stock.s3.eu-west-1.amazonaws.com/general/landscapes.png" target="_blank" width="600px"></mj-image>
+			</mj-column>
+		</mj-section>
+		<mj-section background-repeat="repeat" padding-bottom="0px" padding-top="0px" padding="20px 0" text-align="center">
+			<mj-column>
+				<mj-text font-size="16px" color="#436058" align="left" line-height="1.4" font-family="poppins, sans-serif">Dear Mr/Mrs/Miss @Model.Customer.LastName,</mj-text>
+				<mj-text font-size="16px" color="#436058" align="left" line-height="1.4" font-family="poppins, sans-serif">
+					Thank you for visiting us @if (Model.BookingDetail.VenueName != null) { @($"at {Model.BookingDetail.VenueName}") ;} on @Model.BookingDetail.BookingDate @if(@Model.BookingDetail.BookingTime != null){ @($"at {@Model.BookingDetail.BookingTime.Value}") } &#x2014; we hope you enjoyed your experience and we&#x2019;d love to hear what you think; complete our short survey to be in with a chance to win one of the following:
+				</mj-text>
+				<mj-text padding="2px 50px" font-size="16px" color="#436058" align="left" line-height="1.4" font-family="poppins, sans-serif">
+					• a weekend stay at a Cadw Harlech apartment for two people
+				</mj-text>
+				<mj-text padding="2px 50px" font-size="16px" color="#436058" align="left" line-height="1.4" font-family="poppins, sans-serif">
+					• a year’s Cadw family membership or renewal
+				</mj-text>
+				<mj-text padding="2px 50px" font-size="16px" color="#436058" align="left" line-height="1.4" font-family="poppins, sans-serif">
+					• a Canon IVY REC outdoor activity camera.
+				</mj-text>
+				<mj-button align="left" background-color="#007a6e" color="#FFFFFF" font-size="25px" border-radius="7px" href="https://www.smartsurvey.co.uk/s/XLYUCZ/" inner-padding="0px 20px 4px 20px" padding-bottom="20px" padding-top="10px" border="20px 20px">Survey</mj-button>
+				<mj-text font-size="16px" color="#436058" align="left" line-height="1.4" font-family="poppins, sans-serif">
+					This email is sent in the language preference chosen when you registered with Cadw. To check or amend your details, including your language preference, please log in to MyCadw.
+				</mj-text>
+				<mj-spacer height="40px" />
+				<mj-text font-size="16px" color="#436058" align="left" line-height="1.4" font-family="poppins, sans-serif">
+					Thank you and we hope to see you again soon,
+				</mj-text>
+				<mj-spacer height="40px" />
+				<mj-text font-size="16px" color="#436058" align="left" line-height="1.4" font-family="poppins, sans-serif">
+					The Cadw team.
+				</mj-text>
+				<mj-spacer height="50px" />
+			</mj-column>
+		</mj-section>
+		<mj-section background-color="#14382e" background-repeat="repeat" padding="20px 0px" text-align="center">
+			<mj-column width="35%">
+				<mj-image align="center" padding="10px 25px" src="https://cadw-stock.s3.eu-west-1.amazonaws.com/general/Dragon-Banner.png" target="_blank" width="102px"></mj-image>
+			</mj-column>
+			<mj-column width="65%">
+				<mj-social align="right">
+					<mj-social-element  border-radius="20px" padding="10px" icon-size="25px" href="https://www.facebook.com/CadwWales" src= "https://www.mailjet.com/images/theme/v1/icons/ico-social/facebook.png" name="facebook:url" background-color="#007a6e"></mj-social-element>
+					<mj-social-element border-radius="20px" padding="10px" icon-size="25px" href="https://twitter.com/cadwwales" src="https://www.mailjet.com/images/theme/v1/icons/ico-social/twitter.png" name="twitter:url" background-color="#007a6e"></mj-social-element>
+					<mj-social-element border-radius="20px" padding="10px" icon-size="25px" href="https://www.youtube.com/user/cadwwales" src="https://www.mailjet.com/images/theme/v1/icons/ico-social/youtube.png" name="youtube:url" background-color="#007a6e"></mj-social-element>
+					<mj-social-element border-radius="20px" padding="10px" icon-size="25px" href="https://www.instagram.com/cadwcymruwales/ " src="https://www.mailjet.com/images/theme/v1/icons/ico-social/instagram.png" name="instagram:url" background-color="#007a6e"></mj-social-element>
+				</mj-social>
+			</mj-column>
+		</mj-section>
+	</mj-body>
+</mjml>
