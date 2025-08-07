@@ -272,7 +272,6 @@ namespace BoApi.Extensions
             services.AddScoped<UserResolverService>();
             services.AddScoped<EncryptionService>();
 
-            services.AddScoped<ConvertCurrency>();
             return services;
         }
     }

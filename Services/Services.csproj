@@ -5,15 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Connected Services\Pay360Service\ConnectedService.json" />
+    <Compile Remove="Jobs\Interfaces\**" />
+    <EmbeddedResource Remove="Jobs\Interfaces\**" />
+    <None Remove="Jobs\Interfaces\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Connected Services\Pay360Service\ConnectedService.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
+    <Content Remove="C:\Users\user\.nuget\packages\select.htmltopdf.netcore\21.1.0\contentFiles\any\any\Select.Html.dep" />
   </ItemGroup>
 
   <ItemGroup>
@@ -50,10 +48,6 @@
     <ProjectReference Include="..\DTOs\DTOs.csproj" />
     <ProjectReference Include="..\Entities\Entities.csproj" />
     <ProjectReference Include="..\Repositories\Repositories.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Jobs\Interfaces\" />
   </ItemGroup>
 
 </Project>

@@ -6,10 +6,13 @@
 
   <ItemGroup>
     <Compile Remove="Account\**" />
+    <Compile Remove="Extensions\**" />
     <Compile Remove="Language\**" />
     <EmbeddedResource Remove="Account\**" />
+    <EmbeddedResource Remove="Extensions\**" />
     <EmbeddedResource Remove="Language\**" />
     <None Remove="Account\**" />
+    <None Remove="Extensions\**" />
     <None Remove="Language\**" />
   </ItemGroup>
 
@@ -33,7 +36,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Extensions\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 
