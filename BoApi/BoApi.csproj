@@ -15,24 +15,28 @@
     <Compile Remove="Api.Models\**" />
     <Compile Remove="Api.Repositories\**" />
     <Compile Remove="Api.Services\**" />
+    <Compile Remove="Background\**" />
     <Compile Remove="Common\**" />
     <Compile Remove="Infrastructure\**" />
     <Compile Remove="Migrations\**" />
     <Content Remove="Api.Models\**" />
     <Content Remove="Api.Repositories\**" />
     <Content Remove="Api.Services\**" />
+    <Content Remove="Background\**" />
     <Content Remove="Common\**" />
     <Content Remove="Infrastructure\**" />
     <Content Remove="Migrations\**" />
     <EmbeddedResource Remove="Api.Models\**" />
     <EmbeddedResource Remove="Api.Repositories\**" />
     <EmbeddedResource Remove="Api.Services\**" />
+    <EmbeddedResource Remove="Background\**" />
     <EmbeddedResource Remove="Common\**" />
     <EmbeddedResource Remove="Infrastructure\**" />
     <EmbeddedResource Remove="Migrations\**" />
     <None Remove="Api.Models\**" />
     <None Remove="Api.Repositories\**" />
     <None Remove="Api.Services\**" />
+    <None Remove="Background\**" />
     <None Remove="Common\**" />
     <None Remove="Infrastructure\**" />
     <None Remove="Migrations\**" />
@@ -55,10 +59,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
-    <ItemGroup>
-        <Content Update="Views\*.cshtml" />
-    </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AWS.Logger.SeriLog" Version="3.2.0" />
@@ -115,15 +115,6 @@
     <None Update="Keys\pushPackage.zip">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Mjml\YourBookingEmail.mjml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-	<None Update="Mjml\InternalOrderToWarehouseEmail.mjml">
-		<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	</None>
-	<None Update="Mjml\InternalOrderToWarehouseAttachment.mjml">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	</None>
     <None Update="Resources\ConfirmEmail.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -220,10 +211,6 @@
     <None Update="Resources\sql_init_TopCurrency.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Background\" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
