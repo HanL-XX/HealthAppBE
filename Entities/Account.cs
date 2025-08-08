@@ -3,10 +3,6 @@ using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Entities
 {
@@ -30,7 +26,6 @@ namespace Entities
         [DefaultValue(false)]
         public bool Deleted { get; set; }
         public string Avatar { get; set; }
-        public virtual ICollection<AccountRoleMap> AccountRoleMaps { get; set; }
         public string PhoneNumber { get; set; }
         public bool Allow2FA { get; set; }
         public TwoFactorAuthenticationType TwoFactorAuthenticationType { get; set; }
@@ -38,10 +33,11 @@ namespace Entities
         public int LoginAttempt { get; set; }
         public DateTime UpdatePasswordDate { get; set; }
         public bool IsScanQr { get; set; }
-
-        public Account()
-        {
-            AccountRoleMaps = new List<AccountRoleMap>();
-        }
+        public virtual ICollection<AccountRoleMap> AccountRoleMaps { get; set; } = new List<AccountRoleMap>();
+        public virtual ICollection<Meal> Meals { get; set; } = new List<Meal>();
+        public virtual ICollection<BodyRecord> BodyRecords { get; set; } = new List<BodyRecord>();
+        public virtual ICollection<Exercise> Exercises { get; set; } = new List<Exercise>();
+        public virtual ICollection<Diary> Diarys { get; set; } = new List<Diary>();
+        public virtual ICollection<Article> Articles { get; set; } = new List<Article>();
     }
 }

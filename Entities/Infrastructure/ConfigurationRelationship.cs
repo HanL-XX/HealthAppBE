@@ -31,50 +31,6 @@ namespace Entities.Infrastructure
             builder.Entity<RoleDb>()
                 .Property(b => b.IsActive)
                 .HasDefaultValue(true);
-
-            ConfigShareTable(builder);
-        }
-
-        public static void ConfigTransactionDB(ModelBuilder builder)
-        {
-            builder.Entity<AccountRoleMap>(userRole =>
-            {
-                userRole.HasKey(ur => new { ur.UserId, ur.RoleId });
-
-                userRole.HasOne(ur => ur.Role)
-                    .WithMany(r => r.AccountRoleMaps)
-                    .HasForeignKey(ur => ur.RoleId)
-                    .IsRequired();
-
-                userRole.HasOne(ur => ur.Account)
-                    .WithMany(r => r.AccountRoleMaps)
-                    .HasForeignKey(ur => ur.UserId)
-                    .IsRequired();
-            });
-
-            ConfigShareTable(builder);
-        }
-
-        public static void ConfigTicketingDB(ModelBuilder builder)
-        {
-
-        }
-
-        public static void ConfigTicketingTransactionDB(ModelBuilder builder)
-        {
-            ConfigShareTicketingTable(builder);
-        }
-
-        private static void ConfigShareTicketingTable(ModelBuilder builder)
-        {
-        }
-
-        private static void ConfigShareTable(ModelBuilder builder)
-        {
-        }
-
-        public static void ConfigTicketingCustomerDB(ModelBuilder builder)
-        {
         }
     }
 }

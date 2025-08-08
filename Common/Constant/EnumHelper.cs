@@ -116,6 +116,20 @@ namespace Common.Constant
         /// </summary>
         IdentityV3
     }
+    public enum ArticleCategory
+    {
+        Recommend = 0,
+        Diet = 1,
+        Beauty = 2,
+        Health = 3
+    }
+    public enum MealType
+    {
+        Morning = 1,
+        Lunch = 2,
+        Dinner = 3,
+        Snack = 4
+    }
     public enum Image_Upload_Type
     {
         [Description("Branch")]

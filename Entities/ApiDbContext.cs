@@ -53,6 +53,12 @@ namespace Entities
         }
 
         public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<Article> Articles { get; set; }
+        public DbSet<BodyRecord> BodyRecords { get; set; }
+        public DbSet<Diary> Diaries { get; set; }
+        public DbSet<Exercise> Exercises { get; set; }
+        public DbSet<Meal> Meals{ get; set; }
+
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
