@@ -40,10 +40,12 @@ namespace BoApi.Controllers
             IHostEnvironment hostingEnvironment,
             IConfiguration configuration)
         {
+            _userManager = userManager;
             this._userResolverService = userResolverService;
             this._signInManager = signInManager;
             _hostingEnvironment = hostingEnvironment;
             _configuration = configuration;
+            _dbContext = dbContext;
         }
 
         /// <summary>

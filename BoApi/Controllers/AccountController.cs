@@ -35,7 +35,6 @@ namespace BoApi.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPost]
-        //[Filters.CustomAuthorize(PermissionId: PermissionEnum.Users)]
         public async Task<IActionResult> Create([FromBody] CreateAccountModel model)
         {
             ErrorModel errors = new ErrorModel();

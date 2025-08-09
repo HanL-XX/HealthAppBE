@@ -60,6 +60,49 @@ namespace Services.Implement
         public async Task<Dictionary<ErrorModel, AccountModel>> CreateAccount(CreateAccountModel model)
         {
             var accountResult = new Dictionary<ErrorModel, AccountModel>();
+            var errors = new ErrorModel();
+
+            var account = model.ParseToEntity();
+
+            account.CreatedBy = _userResolverService.GetUserId();
+            account.UpdatedBy = _userResolverService.GetUserId();
+
+            account.Password = JWTHelper.GeneratePassword(model.passwords);
+
+
+            IdentityResult result = new IdentityResult();
+            try
+            {
+                result = await _userManager.CreateAsync(account, model.passwords);
+                if (!result.Succeeded)
+                {
+                    foreach (var error in result.Errors)
+                    {
+                        Console.WriteLine($"{error.Code}: {error.Description}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+            }
+
+            if (!result.Succeeded)
+            {
+                foreach (var error in result.Errors)
+                {
+                    errors.Add(error.Description);
+                }
+                accountResult.Add(errors, new AccountModel());
+                return accountResult;
+            }
+            else
+            {
+                accountResult.Add(new ErrorModel(), new AccountModel());
+            }
+
+            _dbContext.SaveChanges();
+
             return accountResult;
         }
 

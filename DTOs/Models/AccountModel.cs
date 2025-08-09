@@ -88,25 +88,9 @@ namespace DTOs.Models
         /// Email of Account
         /// </summary>
         public string Email { get; set; }
-
-        /// <summary>
-        /// Role of Account
-        /// </summary>
-        public string BackOfficeRole { get; set; }
-
-        /// <summary>
-        /// Login of Account
-        /// </summary>
-        public string Login { get; set; }
-
-        /// <summary>
-        /// Check send invitation email or not ?
-        /// </summary>
-        public bool SendInvitationEmail { get; set; }
         public string PhoneNumber { get; set; }
         public bool? Allow2FA { get; set; }
-        public TwoFactorAuthenticationType? TwoFactorAuthenticationType { get; set; }
-
+        public string passwords { get; set; }
         public Account ParseToEntity()
         {
             Account account = new Account();
@@ -116,7 +100,23 @@ namespace DTOs.Models
             account.LastName = LastName;
             account.Avatar = Avatar;
             account.UpdatePasswordDate = DateTime.Now;
+            account.CreatedDate = DateTime.Now;
+            account.UpdatedDate = DateTime.Now;
+            account.UserName = Email;
+            account.Email = Email;
+            account.EmailConfirmed = true;
+            account.IsActive = true;
+            account.PhoneNumber = PhoneNumber;
+            account.Allow2FA = Allow2FA == null ? false : (bool)Allow2FA;
 
+            //Creat model mock
+            account.IsActive = true;
+            account.HasChangeFirstPwd = true;
+            account.IsScanQr = true;
+            account.LoginAttempt = 1;
+            account.TwoFactorAuthenticationType = TwoFactorAuthenticationType.App;
+            account.Deleted = false;
+            
             return account;
         }
 

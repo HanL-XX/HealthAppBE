@@ -33,6 +33,7 @@ namespace Entities
         public int LoginAttempt { get; set; }
         public DateTime UpdatePasswordDate { get; set; }
         public bool IsScanQr { get; set; }
+        public string Password { get; set; }
         public virtual ICollection<AccountRoleMap> AccountRoleMaps { get; set; } = new List<AccountRoleMap>();
         public virtual ICollection<Meal> Meals { get; set; } = new List<Meal>();
         public virtual ICollection<BodyRecord> BodyRecords { get; set; } = new List<BodyRecord>();
